@@ -8,7 +8,7 @@
 </head> 
 
 <body> 
-<!-- Header --> 
+
 <header class="header"> 
 <div class="container"> 
 <div class="nav-brand"> 
@@ -19,18 +19,24 @@
 </div> 
 
 <nav class="nav-desktop"> 
-<a href="#inicio">Inicio</a> 
-<a href="#como-funciona">Cómo funciona</a> 
-<a href="#about-product">Producto</a> 
-<a href="#mision-vision">Misión y Visión</a> 
-<a href="#opiniones">Opiniones</a> 
-<a href="#contacto">Contacto</a> 
+<a href="#inicio" data-i18n="nav_inicio">Inicio</a> 
+<a href="#como-funciona" data-i18n="nav_como">Cómo funciona</a> 
+<a href="#about-product" data-i18n="nav_producto">Producto</a> 
+<a href="#mision-vision" data-i18n="nav_mision">Misión y Visión</a> 
+<a href="#opiniones" data-i18n="nav_opiniones">Opiniones</a> 
+<a href="#contacto" data-i18n="nav_contacto">Contacto</a> 
 </nav> 
 
 <!-- REGISTRARSE DESKTOP -->
 <button class="btn-primary desktop-only" onclick="window.location.href='https://experimental-design-frontend-web-ap.vercel.app'">
     Registrarse
 </button>
+
+<!-- Language & Theme controls -->
+<div class="header-controls">
+    <button id="langToggle" class="btn-secondary" aria-label="Cambiar idioma">ES</button>
+    <button id="darkModeBtn" class="btn-secondary" aria-label="Alternar modo oscuro">🌙</button>
+</div>
 
 <button class="mobile-menu-btn" id="mobileMenuBtn"> 
 <div class="hamburger" id="hamburger"> 
@@ -44,12 +50,12 @@
 
 <div class="mobile-menu" id="mobileMenu"> 
 <nav class="mobile-nav"> 
-<a href="#inicio" class="mobile-nav-link">Inicio</a> 
-<a href="#como-funciona" class="mobile-nav-link">Cómo funciona</a> 
-<a href="#about-product" class="mobile-nav-link">Producto</a> 
-<a href="#mision-vision" class="mobile-nav-link">Misión y Visión</a> 
-<a href="#opiniones" class="mobile-nav-link">Opiniones</a> 
-<a href="#contacto" class="mobile-nav-link">Contacto</a> 
+<a href="#inicio" class="mobile-nav-link" data-i18n="nav_inicio">Inicio</a> 
+<a href="#como-funciona" class="mobile-nav-link" data-i18n="nav_como">Cómo funciona</a> 
+<a href="#about-product" class="mobile-nav-link" data-i18n="nav_producto">Producto</a> 
+<a href="#mision-vision" class="mobile-nav-link" data-i18n="nav_mision">Misión y Visión</a> 
+<a href="#opiniones" class="mobile-nav-link" data-i18n="nav_opiniones">Opiniones</a> 
+<a href="#contacto" class="mobile-nav-link" data-i18n="nav_contacto">Contacto</a> 
 
 <div class="mobile-menu-footer"> 
     <!-- REGISTRARSE MOBILE -->
@@ -65,16 +71,17 @@
 <section id="inicio" class="hero"> 
 <div class="container"> 
 <div class="hero-content"> 
-<h1 class="hero-title"> 
+</h1> 
+<h1 class="hero-title" data-i18n="hero_title"> 
 Transforma la gestión educativa con <span class="text-primary">LearnHive</span> 
 </h1> 
-<p class="hero-description"> 
+<p class="hero-description" data-i18n="hero_description"> 
 La plataforma integral que conecta estudiantes y docentes para una experiencia educativa más organizada, eficiente y colaborativa. 
 </p> 
 
 <div class="hero-actions"> 
     <!-- EMPIEZA AHORA -->
-<button class="btn-primary btn-large" onclick="window.location.href='https://experimental-design-frontend-web-ap.vercel.app'">
+<button class="btn-primary btn-large" id="startBtn" data-i18n="hero_cta" onclick="window.location.href='https://experimental-design-frontend-web-ap.vercel.app'">
     Empieza ahora →
 </button>
 </div> 
@@ -92,8 +99,8 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <section id="como-funciona" class="how-it-works"> 
 <div class="container"> 
 <div class="section-header"> 
-<h2>¿Cómo funciona LearnHive?</h2> 
-<p>Tres simples pasos para revolucionar tu experiencia educativa</p> 
+<h2 data-i18n="how_title">¿Cómo funciona LearnHive?</h2> 
+<p data-i18n="how_subtitle">Tres simples pasos para revolucionar tu experiencia educativa</p> 
 </div> 
 
 <div class="steps-grid"> 
@@ -101,27 +108,27 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <div class="step-icon"> 
 <span>👥</span> 
 </div> 
-<div class="step-badge step-1">Paso 1</div> 
-<h3>Registro</h3> 
-<p>Crea tu cuenta como estudiante o docente y accede a todas las funcionalidades de la plataforma.</p> 
+<div class="step-badge step-1" data-i18n="step1_badge">Paso 1</div> 
+<h3 data-i18n="step1_title">Registro</h3> 
+<p data-i18n="step1_desc">Crea tu cuenta como estudiante o docente y accede a todas las funcionalidades de la plataforma.</p> 
 </div> 
 
 <div class="step-card"> 
 <div class="step-icon"> 
 <span>📚</span> 
 </div> 
-<div class="step-badge step-2">Paso 2</div> 
-<h3>Organización Académica</h3> 
-<p>Gestiona grupos, asigna trabajos, programa entregas y mantén todo organizado en un solo lugar.</p> 
+<div class="step-badge step-2" data-i18n="step2_badge">Paso 2</div> 
+<h3 data-i18n="step2_title">Organización Académica</h3> 
+<p data-i18n="step2_desc">Gestiona grupos, asigna trabajos, programa entregas y mantén todo organizado en un solo lugar.</p> 
 </div> 
 
 <div class="step-card"> 
 <div class="step-icon"> 
 <span>📈</span> 
 </div> 
-<div class="step-badge step-3">Paso 3</div> 
-<h3>Seguimiento del Progreso</h3> 
-<p>Monitorea el avance, recibe retroalimentación automatizada y mejora continuamente.</p> 
+<div class="step-badge step-3" data-i18n="step3_badge">Paso 3</div> 
+<h3 data-i18n="step3_title">Seguimiento del Progreso</h3> 
+<p data-i18n="step3_desc">Monitorea el avance, recibe retroalimentación automatizada y mejora continuamente.</p> 
 </div> 
 </div> 
 </div> 
@@ -131,34 +138,34 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <section id="about-product" class="product-section"> 
 <div class="container"> 
 <div class="section-header"> 
-<h2>About the Product</h2> 
-<p>Descubre las características principales de LearnHive</p> 
+<h2 data-i18n="about_title">About the Product</h2> 
+<p data-i18n="about_sub">Descubre las características principales de LearnHive</p> 
 </div> 
 
 <div class="product-grid"> 
 <div class="product-feature"> 
-<h3>Gestión Académica Integral</h3> 
-<p>Organiza cursos, asignaturas, tareas y entregas en una plataforma unificada que simplifica la administración educativa.</p> 
+<h3 data-i18n="prod_feat1_title">Gestión Académica Integral</h3> 
+<p data-i18n="prod_feat1_desc">Organiza cursos, asignaturas, tareas y entregas en una plataforma unificada que simplifica la administración educativa.</p> 
 </div> 
 
 <div class="product-feature"> 
-<h3>Colaboración en Tiempo Real</h3> 
-<p>Facilita la comunicación entre estudiantes y docentes con herramientas de colaboración instantánea y feedback continuo.</p> 
+<h3 data-i18n="prod_feat2_title">Colaboración en Tiempo Real</h3> 
+<p data-i18n="prod_feat2_desc">Facilita la comunicación entre estudiantes y docentes con herramientas de colaboración instantánea y feedback continuo.</p> 
 </div> 
 
 <div class="product-feature"> 
-<h3>Análisis y Reportes</h3> 
-<p>Obtén insights detallados sobre el rendimiento académico con dashboards interactivos y reportes personalizados.</p> 
+<h3 data-i18n="prod_feat3_title">Análisis y Reportes</h3> 
+<p data-i18n="prod_feat3_desc">Obtén insights detallados sobre el rendimiento académico con dashboards interactivos y reportes personalizados.</p> 
 </div> 
 
 <div class="product-feature"> 
-<h3>Acceso Multiplataforma</h3> 
-<p>Disponible en web, móvil y tablet para que puedas acceder desde cualquier dispositivo, en cualquier momento.</p> 
+<h3 data-i18n="prod_feat4_title">Acceso Multiplataforma</h3> 
+<p data-i18n="prod_feat4_desc">Disponible en web, móvil y tablet para que puedas acceder desde cualquier dispositivo, en cualquier momento.</p> 
 </div> 
 
 <div class="product-feature"> 
-<h3>Automatización Inteligente</h3> 
-<p>Automatiza tareas repetitivas como calificaciones, recordatorios y notificaciones para mayor eficiencia.</p> 
+<h3 data-i18n="prod_feat5_title">Automatización Inteligente</h3> 
+<p data-i18n="prod_feat5_desc">Automatiza tareas repetitivas como calificaciones, recordatorios y notificaciones para mayor eficiencia.</p> 
 </div> 
 </div> 
 </div> 
@@ -168,7 +175,7 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <section class="team-section"> 
 <div class="container"> 
 <div class="team-content"> 
-<h2>About the team: APX-4</h2> 
+<h2 data-i18n="team_title">About the team: APX-4</h2> 
 
 <div class="team-members-grid"> 
 <div class="team-member-card"> 
@@ -214,8 +221,8 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <section id="mision-vision" class="vision-mission"> 
 <div class="container"> 
 <div class="section-header"> 
-<h2>Nuestra Visión y Misión</h2> 
-<p>Construyendo el futuro de la educación digital</p> 
+<h2 data-i18n="vision_title">Nuestra Visión y Misión</h2> 
+<p data-i18n="vision_sub">Construyendo el futuro de la educación digital</p> 
 </div> 
 
 <div class="vision-mission-grid"> 
@@ -223,14 +230,14 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <div class="card-header"> 
 <h3>Visión</h3> 
 </div> 
-<p>Convertirnos en el referente de gestión educativa en Lima Metropolitana...</p> 
+<p data-i18n="vision_desc">Convertirnos en el referente de gestión educativa en Lima Metropolitana...</p> 
 </div> 
 
 <div class="mission-card"> 
 <div class="card-header"> 
 <h3>Misión</h3> 
 </div> 
-<p>Empoderar a docentes y estudiantes con una plataforma intuitiva...</p> 
+<p data-i18n="mission_desc">Empoderar a docentes y estudiantes con una plataforma intuitiva...</p> 
 </div> 
 </div> 
 </div> 
@@ -240,60 +247,60 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 <section id="opiniones" class="testimonials"> 
 <div class="container"> 
 <div class="section-header"> 
-<h2>Lo que dicen nuestros usuarios</h2> 
-<p>Testimonios reales...</p> 
+<h2 data-i18n="testi_title">Lo que dicen nuestros usuarios</h2> 
+<p data-i18n="testi_sub">Testimonios reales...</p> 
 </div> 
 
 <div class="testimonials-grid"> 
 <div class="testimonial-card"> 
-<div class="stars">⭐⭐⭐⭐⭐</div> 
-<p>"Lorem ipsum dolor sit amet..."</p> 
-<div class="testimonial-author"> 
-<div class="author-avatar avatar-1">MG</div> 
-<div class="author-info"> 
-<p class="author-name">María González</p> 
-<p class="author-role">Docente</p> 
-</div> 
-</div> 
-</div> 
-
-<div class="testimonial-card"> 
-<div class="stars">⭐⭐⭐⭐⭐</div> 
-<p>"Quis nostrud exercitation..."</p> 
-<div class="testimonial-author"> 
-<div class="author-avatar avatar-2">CR</div> 
-<div class="author-info"> 
-<p class="author-name">Carlos Rodríguez</p> 
-<p class="author-role">Estudiante</p> 
-</div> 
-</div> 
+    <div class="stars">⭐⭐⭐⭐⭐</div> 
+    <p data-i18n="testi_1_text">"LearnHive me ayuda a organizar mis clases y me ahorra tiempo en correcciones."</p> 
+    <div class="testimonial-author"> 
+        <div class="author-avatar avatar-1">MG</div> 
+        <div class="author-info"> 
+            <p class="author-name">María González</p> 
+            <p class="author-role" data-i18n="testi_1_role">Docente</p> 
+        </div> 
+    </div> 
 </div> 
 
 <div class="testimonial-card"> 
-<div class="stars">⭐⭐⭐⭐⭐</div> 
-<p>"Excepteur sint occaecat..."</p> 
-<div class="testimonial-author"> 
-<div class="author-avatar avatar-3">AL</div> 
-<div class="author-info"> 
-<p class="author-name">Ana López</p> 
-<p class="author-role">Profesora</p> 
+    <div class="stars">⭐⭐⭐⭐⭐</div> 
+    <p data-i18n="testi_2_text">"Ahora entrego mis tareas a tiempo y veo mi progreso con claridad."</p> 
+    <div class="testimonial-author"> 
+        <div class="author-avatar avatar-2">CR</div> 
+        <div class="author-info"> 
+            <p class="author-name">Carlos Rodríguez</p> 
+            <p class="author-role" data-i18n="testi_2_role">Estudiante</p> 
+        </div> 
+    </div> 
 </div> 
-</div> 
+
+<div class="testimonial-card"> 
+    <div class="stars">⭐⭐⭐⭐⭐</div> 
+    <p data-i18n="testi_3_text">"La comunicación con mis estudiantes mejoró bastante desde que usamos la plataforma."</p> 
+    <div class="testimonial-author"> 
+        <div class="author-avatar avatar-3">AL</div> 
+        <div class="author-info"> 
+            <p class="author-name">Ana López</p> 
+            <p class="author-role" data-i18n="testi_3_role">Profesora</p> 
+        </div> 
+    </div> 
 </div> 
 </div> 
 </div> 
 </section> 
 
-<!-- CTA --> 
+
 <section class="cta-section"> 
 <div class="container"> 
 <div class="cta-content"> 
-<h2>¿Listo para transformar tu experiencia educativa?</h2> 
-<p>Únete a cientos de estudiantes y docentes...</p> 
+<h2 data-i18n="cta_title">¿Listo para transformar tu experiencia educativa?</h2> 
+<p data-i18n="cta_sub">Únete a cientos de estudiantes y docentes...</p> 
 
 <div class="cta-actions"> 
-    <!-- COMENZAR GRATIS -->
-<button class="btn-secondary btn-large" onclick="window.location.href='https://experimental-design-frontend-web-ap.vercel.app'">
+
+<button class="btn-secondary btn-large" id="ctaBtn" data-i18n="cta_btn" onclick="window.location.href='https://experimental-design-frontend-web-ap.vercel.app'">
     Comenzar gratis →
 </button>
 </div> 
@@ -301,31 +308,35 @@ La plataforma integral que conecta estudiantes y docentes para una experiencia e
 </div> 
 </section> 
 
-<!-- Footer --> 
 <footer id="contacto" class="footer"> 
 <div class="container"> 
 <div class="footer-grid"> 
 <div class="footer-brand"> 
-<p class="footer-description">Transformando la educación...</p> 
+<p class="footer-description" data-i18n="footer_desc">Transformando la educación...</p> 
+
+    <div class="footer-ctas">
+        <a class="btn-secondary footer-btn" href="https://experimental-design-frontend-web-ap.vercel.app/complaints" target="_blank" rel="noopener noreferrer" data-i18n="footer_complaints">Libro de Reclamaciones</a>
+        <a class="btn-secondary footer-btn" href="https://experimental-design-frontend-web-ap.vercel.app/saas" target="_blank" rel="noopener noreferrer" data-i18n="footer_saas">Acuerdo SaaS</a>
+    </div>
 </div> 
 
 <div class="footer-links"> 
-<h4>Enlaces rápidos</h4> 
+<h4 data-i18n="footer_links_title">Enlaces rápidos</h4> 
 <ul> 
-<li><a href="#inicio">Inicio</a></li> 
-<li><a href="#como-funciona">Cómo funciona</a></li> 
-<li><a href="#mision-vision">Misión y Visión</a></li> 
-<li><a href="#opiniones">Testimonios</a></li> 
+<li><a href="#inicio" data-i18n="footer_link_inicio">Inicio</a></li> 
+<li><a href="#como-funciona" data-i18n="footer_link_como">Cómo funciona</a></li> 
+<li><a href="#mision-vision" data-i18n="footer_link_mision">Misión y Visión</a></li> 
+<li><a href="#opiniones" data-i18n="footer_link_testimonios">Testimonios</a></li> 
 </ul> 
 </div> 
 
 <div class="footer-support"> 
-<h4>Soporte</h4> 
+<h4 data-i18n="footer_support_title">Soporte</h4> 
 <ul> 
-<li><a href="#">Política de privacidad</a></li> 
-<li><a href="#">Términos de servicio</a></li> 
-<li><a href="#">Contacto</a></li> 
-<li><a href="#">Ayuda</a></li> 
+<li><a href="#" data-i18n="footer_privacy">Política de privacidad</a></li> 
+<li><a href="#" data-i18n="footer_terms">Términos de servicio</a></li> 
+<li><a href="#" data-i18n="footer_contact">Contacto</a></li> 
+<li><a href="#" data-i18n="footer_help">Ayuda</a></li> 
 </ul> 
 </div> 
 </div> 
