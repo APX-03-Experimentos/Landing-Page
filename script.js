@@ -297,6 +297,20 @@ document.addEventListener("DOMContentLoaded", () => {
   header.style.transition = "transform 0.3s ease-in-out"
 })
 
+// Pausar otros vídeos cuando uno empieza a reproducirse
+document.addEventListener('DOMContentLoaded', () => {
+  const videos = Array.from(document.querySelectorAll('video'));
+  videos.forEach((v) => {
+    v.addEventListener('play', () => {
+      videos.forEach((other) => {
+        if (other !== v) {
+          other.pause();
+        }
+      });
+    });
+  });
+});
+
 
 window.addEventListener("load", () => {
   document.body.style.opacity = "0"

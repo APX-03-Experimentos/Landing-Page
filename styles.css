@@ -526,6 +526,25 @@ body {
   line-height: 1.6;
 }
 
+/* Vídeos responsivos y contenedores */
+.product-video,
+.team-video {
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.responsive-video {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 30px rgba(16,24,40,0.12);
+  background: #000;
+  display: block;
+}
+
 /* Team Section */
 .team-section {
   padding: 6rem 0;
